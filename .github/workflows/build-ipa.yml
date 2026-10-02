@@ -5,6 +5,9 @@ on:
   push:
     branches: [ master, main ]
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: macos-15
@@ -15,9 +18,6 @@ jobs:
       - name: Show schemes (diagnostic)
         run: xcodebuild -workspace Swifty360Player.xcworkspace -list
 
-      # 仓库里 Pods 已提交且 Manifest.lock 与 Podfile.lock 一致，
-      # 但仍重新生成一次以匹配 runner 上的新 Xcode / CocoaPods。
-      # 唯一依赖是本地 path pod，此步不需要联网。
       - name: Pod install
         run: pod install --no-repo-update
 
@@ -50,6 +50,18 @@ jobs:
         with:
           name: Swifty360Player-unsigned-ipa
           path: Swifty360Player-Sample-unsigned.ipa
+
+      - name: Publish to Releases
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: "Unsigned IPA - Build #${{ github.run_number }}"
+          body: |
+            Auto-built unsigned Sample.ipa (Swifty360Player demo app).
+            Download and sign it with Sideloadly / AltStore before installing on a device.
+          files: Swifty360Player-Sample-unsigned.ipa
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload build log on failure
         if: failure()
