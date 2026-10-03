@@ -56,13 +56,11 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIDocume
 
         stackView.addArrangedSubview(makeButton(title: "播放文件 App 中的视频", action: #selector(pickFromFiles)))
 
-        stackView.addArrangedSubview(makeButton(title: "SMB 共享", action: #selector(openSMB)))
-
 
 
         let hint = UILabel()
 
-        hint.text = "支持 360° 全景视频（等距柱状投影 2:1）\n普通视频画面会变形\n点按画面可重置视角到水平线"
+        hint.text = "支持 360° 全景视频（等距柱状投影 2:1），普通视频会变形\n点按画面重置视角，双指捏合变焦\n看 NAS/SMB：先在 文件 App 连接服务器（浏览 → ⋯ → 连接服务器），\n再用第二个入口选择视频，边下边播"
 
         hint.textColor = UIColor(white: 0.7, alpha: 1.0)
 
@@ -203,22 +201,6 @@ class ViewController: UIViewController, PHPickerViewControllerDelegate, UIDocume
         guard let url = urls.first else { return }
 
         play(url: url, securityScoped: true)
-
-    }
-
-
-
-    // MARK: - SMB
-
-
-
-    @objc private func openSMB() {
-
-        let smbViewController = SMBViewController()
-
-        smbViewController.modalPresentationStyle = .fullScreen
-
-        present(smbViewController, animated: true)
 
     }
 
