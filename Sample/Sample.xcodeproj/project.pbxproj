@@ -13,6 +13,8 @@
 		1C00A0A71F9E2DDC007308BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C00A0A61F9E2DDC007308BA /* Assets.xcassets */; };
 		1C00A0AA1F9E2DDC007308BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C00A0A81F9E2DDC007308BA /* LaunchScreen.storyboard */; };
 		1C6C10EA1FB5E9C700CCE4FE /* google-help-vr.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1C6C10E91FB5E9C700CCE4FE /* google-help-vr.mp4 */; };
+		AA0000012026100300000001 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000022026100300000002 /* PlayerViewController.swift */; };
+		AA0000032026100300000003 /* SMBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000042026100300000004 /* SMBViewController.swift */; };
 		6FA751A8F4E333E9A8D9FC86 /* Pods_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B704CA9DBEC5069FA80715 /* Pods_Sample.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		1C00A0A91F9E2DDC007308BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C00A0AB1F9E2DDC007308BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C6C10E91FB5E9C700CCE4FE /* google-help-vr.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "google-help-vr.mp4"; sourceTree = "<group>"; };
+		AA0000022026100300000002 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		AA0000042026100300000004 /* SMBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBViewController.swift; sourceTree = "<group>"; };
 		72B704CA9DBEC5069FA80715 /* Pods_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BB8A8DCD23AEAB23641664 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		A8EF2FF7FDE661BE3463AC72 /* Pods-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Sample/Pods-Sample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 				1CC0F0E31F9E3B6600AE9D96 /* Resource */,
 				1C00A09F1F9E2DDC007308BA /* AppDelegate.swift */,
 				1C00A0A11F9E2DDC007308BA /* ViewController.swift */,
+				AA0000022026100300000002 /* PlayerViewController.swift */,
+				AA0000042026100300000004 /* SMBViewController.swift */,
 				1C00A0A31F9E2DDC007308BA /* Main.storyboard */,
 				1C00A0A61F9E2DDC007308BA /* Assets.xcassets */,
 				1C00A0A81F9E2DDC007308BA /* LaunchScreen.storyboard */,
@@ -215,6 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C00A0A21F9E2DDC007308BA /* ViewController.swift in Sources */,
+				AA0000012026100300000001 /* PlayerViewController.swift in Sources */,
+				AA0000032026100300000003 /* SMBViewController.swift in Sources */,
 				1C00A0A01F9E2DDC007308BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,7 +247,6 @@
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		1C00A0AC1F9E2DDC007308BA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -291,13 +298,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -345,11 +352,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -362,7 +369,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5EHDAGHZ78;
 				INFOPLIST_FILE = Sample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdullahselek.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,7 +386,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5EHDAGHZ78;
 				INFOPLIST_FILE = Sample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abdullahselek.Sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
