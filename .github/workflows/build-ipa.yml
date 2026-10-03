@@ -19,7 +19,10 @@ jobs:
         run: xcodebuild -workspace Swifty360Player.xcworkspace -list
 
       - name: Pod install
-        run: pod install --no-repo-update
+        run: |
+          pod install --no-repo-update
+          echo "=== 探针: 全仓库搜索 AMSMB2 残留 ==="
+          grep -rn "AMSMB2" Pods/ Sample/ Podfile.lock 2>/dev/null || echo "无 AMSMB2 残留"
 
       - name: Build (unsigned, device)
         run: |
@@ -34,6 +37,10 @@ jobs:
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY="" \
             build 2>&1 | tee build.log | tail -40
+          echo "=== 探针: 产物二进制的动态库加载命令 ==="
+          otool -L build/Build/Products/Release-iphoneos/Sample.app/Sample | head -30
+          echo "=== 探针: LC_RPATH ==="
+          otool -l build/Build/Products/Release-iphoneos/Sample.app/Sample | grep -A2 LC_RPATH | head -20
 
       - name: Package unsigned IPA
         run: |
@@ -63,8 +70,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Upload build log on failure
-        if: failure()
+      - name: Upload full build log
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: build-log
