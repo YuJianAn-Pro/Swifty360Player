@@ -39,6 +39,7 @@ final class PlayerViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.black
+        UIApplication.shared.isIdleTimerDisabled = true
 
         if securityScoped {
             accessing = videoURL.startAccessingSecurityScopedResource()
@@ -99,7 +100,13 @@ final class PlayerViewController: UIViewController {
     }
 
     @objc private func closeTapped() {
+        UIApplication.shared.isIdleTimerDisabled = false
         player?.pause()
         dismiss(animated: true)
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        UIApplication.shared.isIdleTimerDisabled = false
     }
 }
