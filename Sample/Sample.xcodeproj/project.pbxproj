@@ -14,7 +14,6 @@
 		1C00A0AA1F9E2DDC007308BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C00A0A81F9E2DDC007308BA /* LaunchScreen.storyboard */; };
 		1C6C10EA1FB5E9C700CCE4FE /* google-help-vr.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1C6C10E91FB5E9C700CCE4FE /* google-help-vr.mp4 */; };
 		AA0000012026100300000001 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000022026100300000002 /* PlayerViewController.swift */; };
-		AA0000032026100300000003 /* SMBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0000042026100300000004 /* SMBViewController.swift */; };
 		6FA751A8F4E333E9A8D9FC86 /* Pods_Sample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B704CA9DBEC5069FA80715 /* Pods_Sample.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,7 +27,6 @@
 		1C00A0AB1F9E2DDC007308BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C6C10E91FB5E9C700CCE4FE /* google-help-vr.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "google-help-vr.mp4"; sourceTree = "<group>"; };
 		AA0000022026100300000002 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
-		AA0000042026100300000004 /* SMBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMBViewController.swift; sourceTree = "<group>"; };
 		72B704CA9DBEC5069FA80715 /* Pods_Sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BB8A8DCD23AEAB23641664 /* Pods-Sample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Sample/Pods-Sample.release.xcconfig"; sourceTree = "<group>"; };
 		A8EF2FF7FDE661BE3463AC72 /* Pods-Sample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Sample/Pods-Sample.debug.xcconfig"; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				1C00A09F1F9E2DDC007308BA /* AppDelegate.swift */,
 				1C00A0A11F9E2DDC007308BA /* ViewController.swift */,
 				AA0000022026100300000002 /* PlayerViewController.swift */,
-				AA0000042026100300000004 /* SMBViewController.swift */,
 				1C00A0A31F9E2DDC007308BA /* Main.storyboard */,
 				1C00A0A61F9E2DDC007308BA /* Assets.xcassets */,
 				1C00A0A81F9E2DDC007308BA /* LaunchScreen.storyboard */,
@@ -126,9 +123,6 @@
 			productName = Sample;
 			productReference = 1C00A09C1F9E2DDC007308BA /* Sample.app */;
 			productType = "com.apple.product-type.application";
-			packageProductDependencies = (
-				AA0000F220261003000000F2 /* AMSMB2 */,
-			);
 		};
 /* End PBXNativeTarget section */
 
@@ -159,9 +153,6 @@
 			productRefGroup = 1C00A09D1F9E2DDC007308BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
-			packageReferences = (
-				AA0000F120261003000000F1 /* XCRemoteSwiftPackageReference "AMSMB2" */,
-			);
 			targets = (
 				1C00A09B1F9E2DDC007308BA /* Sample */,
 			);
@@ -228,7 +219,6 @@
 			files = (
 				1C00A0A21F9E2DDC007308BA /* ViewController.swift in Sources */,
 				AA0000012026100300000001 /* PlayerViewController.swift in Sources */,
-				AA0000032026100300000003 /* SMBViewController.swift in Sources */,
 				1C00A0A01F9E2DDC007308BA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,24 +415,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		AA0000F120261003000000F1 /* XCRemoteSwiftPackageReference "AMSMB2" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/amosavian/AMSMB2.git";
-			requirement = {
-				kind = exactVersion;
-				version = 4.0.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		AA0000F220261003000000F2 /* AMSMB2 */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA0000F120261003000000F1 /* XCRemoteSwiftPackageReference "AMSMB2" */;
-			productName = AMSMB2;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C00A0941F9E2DDC007308BA /* Project object */;
 }
