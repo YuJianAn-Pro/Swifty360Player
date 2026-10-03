@@ -126,6 +126,9 @@
 			productName = Sample;
 			productReference = 1C00A09C1F9E2DDC007308BA /* Sample.app */;
 			productType = "com.apple.product-type.application";
+			packageProductDependencies = (
+				AA0000F220261003000000F2 /* AMSMB2 */,
+			);
 		};
 /* End PBXNativeTarget section */
 
@@ -156,6 +159,9 @@
 			productRefGroup = 1C00A09D1F9E2DDC007308BA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
+			packageReferences = (
+				AA0000F120261003000000F1 /* XCRemoteSwiftPackageReference "AMSMB2" */,
+			);
 			targets = (
 				1C00A09B1F9E2DDC007308BA /* Sample */,
 			);
@@ -247,6 +253,7 @@
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		1C00A0AC1F9E2DDC007308BA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -417,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AA0000F120261003000000F1 /* XCRemoteSwiftPackageReference "AMSMB2" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amosavian/AMSMB2.git";
+			requirement = {
+				kind = exactVersion;
+				version = 4.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AA0000F220261003000000F2 /* AMSMB2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA0000F120261003000000F1 /* XCRemoteSwiftPackageReference "AMSMB2" */;
+			productName = AMSMB2;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C00A0941F9E2DDC007308BA /* Project object */;
 }
