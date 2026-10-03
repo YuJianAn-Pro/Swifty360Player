@@ -6,8 +6,6 @@ def product_pods
 
     pod 'Swifty360Player', :path => '.'
 
-    pod 'AMSMB2'
-
 end
 
 
