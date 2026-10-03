@@ -237,7 +237,7 @@ final class SMBViewController: UIViewController, UITableViewDataSource, UITableV
                 guard let name = item[.nameKey] as? String, !name.hasPrefix(".") else { continue }
                 let itemPath = (item[.pathKey] as? String) ?? (path.isEmpty ? name : path + "/" + name)
                 let type = item[.fileResourceTypeKey] as? URLFileResourceType
-                if type == .typeDirectory {
+                if type == .directory {
                     parsed.append(.directory(path: itemPath, name: name))
                 } else if Self.supportedExtensions.contains(URL(fileURLWithPath: name).pathExtension.lowercased()) {
                     parsed.append(.video(path: itemPath, name: name))
